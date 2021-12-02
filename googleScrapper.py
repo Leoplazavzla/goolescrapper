@@ -28,7 +28,7 @@ searchURL = "https://www.google.com/search?q=linkedin"
 for row in range(rows):
     studentName = df.loc[row][0]
     soup = BeautifulSoup(requests.get(
-        searchURL + ' ' + studentName + ' ' + 'belgium' + 'project management').text, "html.parser")
+        searchURL + ' ' + studentName + ' ' + 'prince2').text, "html.parser")
     linkElements = soup.find('div', {"class": "kCrYT"})
     # get the anchor tags
     # print(linkElements.a)
